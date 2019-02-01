@@ -8,13 +8,14 @@ namespace Inclive.Persistence
         public IncliveDbContext(DbContextOptions<IncliveDbContext> options)
             : base(options)
         {
+            Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(IncliveDbContext).Assembly);
         }
-
+ 
         public DbSet<Player> Players { get; set; }
     }
 }

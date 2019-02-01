@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Inclive.Domain.Entities;
 
 namespace Inclive.Application.Repositories
@@ -7,5 +8,6 @@ namespace Inclive.Application.Repositories
     {
         Task<Player> GetPlayerByEmailAndPassword(string email, string password);
         Task<bool> PlayerWithEmailExist(string email);
+        Task<IEnumerable<Character>> GetPlayerCharacters(int playerId);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Inclive.Domain.Enums
 {
-    public class SexType : Enumeration
+    /*public class SexType : Enumeration
     {
         public SexType Male = new MaleSexType();
         public SexType Female = new FemaleSexType();
@@ -25,5 +25,10 @@ namespace Inclive.Domain.Enums
                 
             }
         }
+    }*/
+    public enum SexType
+    {
+        Male = 0,
+        Female = 1
     }
 }

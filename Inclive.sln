@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inclive.Domain", "Inclive.Domain\Inclive.Domain.csproj", "{F726864A-52E5-49C7-8617-A7D2EB29D16E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inclive.Domain", "Inclive.Domain\Inclive.Domain.csproj", "{F726864A-52E5-49C7-8617-A7D2EB29D16E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inclive.Persistence", "Inclive.Persistence\Inclive.Persistence.csproj", "{5D2EF360-91BD-4778-99E1-D084519BD699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inclive.Persistence", "Inclive.Persistence\Inclive.Persistence.csproj", "{5D2EF360-91BD-4778-99E1-D084519BD699}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inclive.Application", "Inclive.Application\Inclive.Application.csproj", "{1741DEB7-424B-4C21-9D79-2913A320CC32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inclive.Application", "Inclive.Application\Inclive.Application.csproj", "{1741DEB7-424B-4C21-9D79-2913A320CC32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inclive.Backend", "Inclive.Backend\Inclive.Backend.csproj", "{826A3C8F-292C-4019-A37C-DFABBC6EE934}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inclive.Backend", "Inclive.Backend\Inclive.Backend.csproj", "{6F9B7A32-0E2B-4E7A-B4CB-D585FEDB4A3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{1741DEB7-424B-4C21-9D79-2913A320CC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1741DEB7-424B-4C21-9D79-2913A320CC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1741DEB7-424B-4C21-9D79-2913A320CC32}.Release|Any CPU.Build.0 = Release|Any CPU
-		{826A3C8F-292C-4019-A37C-DFABBC6EE934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{826A3C8F-292C-4019-A37C-DFABBC6EE934}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{826A3C8F-292C-4019-A37C-DFABBC6EE934}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{826A3C8F-292C-4019-A37C-DFABBC6EE934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F9B7A32-0E2B-4E7A-B4CB-D585FEDB4A3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F9B7A32-0E2B-4E7A-B4CB-D585FEDB4A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F9B7A32-0E2B-4E7A-B4CB-D585FEDB4A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F9B7A32-0E2B-4E7A-B4CB-D585FEDB4A3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

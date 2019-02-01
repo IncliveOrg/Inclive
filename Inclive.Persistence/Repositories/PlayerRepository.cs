@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Inclive.Application.Repositories;
 using Inclive.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +25,11 @@ namespace Inclive.Persistence.Repositories
         public async Task<bool> PlayerWithEmailExist(string email)
         {
             return await _dbContext.Players.AnyAsync(p => p.Email.Equals(email));
+        }
+
+        public async Task<IEnumerable<Character>> GetPlayerCharacters(int playerId)
+        {
+            return (await _dbContext.Players.FirstAsync(p => p.Id == playerId)).Characters;
         }
 
         public async Task CreatePlayer(Player player)

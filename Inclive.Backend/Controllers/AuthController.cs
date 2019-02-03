@@ -36,10 +36,10 @@ namespace Inclive.Backend.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody]IDictionary<string, string> data)
         {
-            if (!data.ContainsKey("email"))
+            if (!data.ContainsKey("email") || data["email"].Length == 0)
                 return BadRequest(new {message = "Email is missing."});
 
-            if (!data.ContainsKey("password"))
+            if (!data.ContainsKey("password") || data["password"].Length == 0)
                 return BadRequest(new {message = "Password is missing."});
 
             var email = data["email"];
@@ -77,7 +77,18 @@ namespace Inclive.Backend.Controllers
             try
             {
                 await Mediator.Send(new CreatePlayerCommand {Email = email, Password = password});
-                return Ok();
+
+                var queryResult = await Mediator.Send(new GetPlayerQuery { Email = email, Password = password });
+                var player = queryResult.Player;
+
+                var tokenString = GenerateTokenForPlayer(player.Id);
+
+                return Ok(new
+                {
+                    Id = player.Id,
+                    Email = player.Email,
+                    Token = tokenString
+                });
             }
             catch (PlayerWithSuchEmailAlreadyExistsException)
             {
